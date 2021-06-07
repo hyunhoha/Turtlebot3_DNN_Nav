@@ -1,0 +1,9 @@
+<launch>
+
+<arg name="model" default="$(env TURTLEBOT3_MODEL)" doc="model type [burger, waffle, waffle_pi]"/>
+  <param name="model" value="$(arg model)"/>
+
+    <node name="turtlesim_random_move" pkg="knu_prj" type="turtlesim_random_move" output="screen"/>
+
+    
+</launch>
