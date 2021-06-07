@@ -1,4 +1,0 @@
-<launch>
-    <node name="talker" pkg="knu_prj" type="talker" output="screen"/>
-    <node name="listener" pkg="knu_prj" type="listener" output="screen"/>
-</launch>
