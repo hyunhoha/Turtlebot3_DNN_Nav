@@ -33,12 +33,12 @@ def image_callback(image_data):
     control_out = model.predict(image)[0]
     print("control : ", control_out)
 
-    a, b, c, d = -0.2, 1, 0.26, 1
-    twist_data.linear.x = (control_out[0] * a) + (control_out[1] * 0.1) + (control_out[2] * c) + (control_out[3] * 0.1)
+    w1, w2, w3, w4 = -0.2, 1, 0.26, 1
+    twist_data.linear.x = (control_out[0] * w1) + (control_out[1] * 0.1) + (control_out[2] * w3) + (control_out[3] * 0.1)
     if control_out[1] >= control_out[3]:
-        twist_data.angular.z = -control_out[1]*b
+        twist_data.angular.z = -control_out[1]*w2
     else:
-        twist_data.angular.z = -control_out[3]*d
+        twist_data.angular.z = -control_out[3]*w4
 
     pub.publish(twist_data)
     print("control : ", twist_data.linear.x, twist_data.angular.z)
