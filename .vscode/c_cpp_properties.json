@@ -5,7 +5,6 @@
       "includePath": [
         "${workspaceFolder}/**"
       ],
-      "defines": [],
       "compilerPath": "gcc",
       "cStandard": "${default}",
       "cppStandard": "${default}",
