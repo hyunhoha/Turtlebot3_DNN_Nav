@@ -64,27 +64,27 @@ def image_callback(msg):
     # print(count)
 
     try:
-        if img_count % 5 == 0:
+        # if img_count % 2 == 0:
         # Hz 1/20 (Slower)
         # if current_vel.linear.x < 0 or (current_vel.linear.x == 0 and current_vel.angular.z == 0):
         #     return None
         # else:
-            cv2_img = bridge.imgmsg_to_cv2(msg, "32FC1")#"bgr8")
-            cv_image_array = np.array(cv2_img, dtype = np.dtype('f8'))
-            cv_image_norm = cv2.normalize(cv_image_array, cv_image_array, 0, 255, cv2.NORM_MINMAX)
+        cv2_img = bridge.imgmsg_to_cv2(msg, "32FC1")#"bgr8")
+        cv_image_array = np.array(cv2_img, dtype = np.dtype('f8'))
+        cv_image_norm = cv2.normalize(cv_image_array, cv_image_array, 0, 255, cv2.NORM_MINMAX)
+        
+        # current_img = cv_image_norm
+        s='/home/iasl/catkin_ws/src/knu_prj/new_images_res/camera_image'+str(count)+'.jpeg'
+        s2 = '/home/iasl/catkin_ws/src/knu_prj/new_label_res.txt'
+        
+        # print s
+        cv2.imwrite(s, cv_image_norm)
+        f = open(s2, 'a')
+        f.write(str(current_vel.linear.x) + " " + str(current_vel.angular.z) + "\n")
+        count += 1
+        img_count=0
             
-            # current_img = cv_image_norm
-            s='/home/iasl/catkin_ws/src/knu_prj/images_collision/camera_image'+str(count)+'.jpeg'
-            s2 = '/home/iasl/catkin_ws/src/knu_prj/label_collision.txt'
-            
-            # print s
-            cv2.imwrite(s, cv_image_norm)
-            f = open(s2, 'a')
-            f.write(str(current_vel.linear.x) + " " + str(current_vel.angular.z) + "\n")
-            count += 1
-            img_count=0
-            
-        img_count += 1
+        # img_count += 1
         # else:
         #     return None
     except:
