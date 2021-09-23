@@ -1,0 +1,4 @@
+/home/hyun/box_plugins/build/CMakeFiles/rebuild_cache.dir
+/home/hyun/box_plugins/build/CMakeFiles/edit_cache.dir
+/home/hyun/box_plugins/build/CMakeFiles/box_plugin.dir
+/home/hyun/box_plugins/build/CMakeFiles/box_linear.dir
