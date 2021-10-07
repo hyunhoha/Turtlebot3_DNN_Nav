@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/hyun/box_plugins
+CMAKE_SOURCE_DIR = /home/iasl/hyun/box_plugins
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/hyun/box_plugins/build
+CMAKE_BINARY_DIR = /home/iasl/hyun/box_plugins/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyun/box_plugins/build/CMakeFiles /home/hyun/box_plugins/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/iasl/hyun/box_plugins/build/CMakeFiles /home/iasl/hyun/box_plugins/build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/hyun/box_plugins/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/iasl/hyun/box_plugins/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -109,6 +109,19 @@ preinstall/fast:
 depend:
 	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
+
+#=============================================================================
+# Target rules for targets named obstacle_plugin
+
+# Build rule for target.
+obstacle_plugin: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 obstacle_plugin
+.PHONY : obstacle_plugin
+
+# fast build rule for target.
+obstacle_plugin/fast:
+	$(MAKE) -f CMakeFiles/obstacle_plugin.dir/build.make CMakeFiles/obstacle_plugin.dir/build
+.PHONY : obstacle_plugin/fast
 
 #=============================================================================
 # Target rules for targets named box_plugin
@@ -190,6 +203,33 @@ box_plugin.cc.s:
 	$(MAKE) -f CMakeFiles/box_plugin.dir/build.make CMakeFiles/box_plugin.dir/box_plugin.cc.s
 .PHONY : box_plugin.cc.s
 
+obstacle_plugin.o: obstacle_plugin.cc.o
+
+.PHONY : obstacle_plugin.o
+
+# target to build an object file
+obstacle_plugin.cc.o:
+	$(MAKE) -f CMakeFiles/obstacle_plugin.dir/build.make CMakeFiles/obstacle_plugin.dir/obstacle_plugin.cc.o
+.PHONY : obstacle_plugin.cc.o
+
+obstacle_plugin.i: obstacle_plugin.cc.i
+
+.PHONY : obstacle_plugin.i
+
+# target to preprocess a source file
+obstacle_plugin.cc.i:
+	$(MAKE) -f CMakeFiles/obstacle_plugin.dir/build.make CMakeFiles/obstacle_plugin.dir/obstacle_plugin.cc.i
+.PHONY : obstacle_plugin.cc.i
+
+obstacle_plugin.s: obstacle_plugin.cc.s
+
+.PHONY : obstacle_plugin.s
+
+# target to generate assembly for a file
+obstacle_plugin.cc.s:
+	$(MAKE) -f CMakeFiles/obstacle_plugin.dir/build.make CMakeFiles/obstacle_plugin.dir/obstacle_plugin.cc.s
+.PHONY : obstacle_plugin.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,6 +238,7 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... obstacle_plugin"
 	@echo "... box_plugin"
 	@echo "... box_linear"
 	@echo "... box_linear.o"
@@ -206,6 +247,9 @@ help:
 	@echo "... box_plugin.o"
 	@echo "... box_plugin.i"
 	@echo "... box_plugin.s"
+	@echo "... obstacle_plugin.o"
+	@echo "... obstacle_plugin.i"
+	@echo "... obstacle_plugin.s"
 .PHONY : help
 
 

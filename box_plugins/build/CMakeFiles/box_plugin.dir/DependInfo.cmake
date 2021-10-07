@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/hyun/box_plugins/box_plugin.cc" "/home/hyun/box_plugins/build/CMakeFiles/box_plugin.dir/box_plugin.cc.o"
+  "/home/iasl/hyun/box_plugins/box_plugin.cc" "/home/iasl/hyun/box_plugins/build/CMakeFiles/box_plugin.dir/box_plugin.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -29,7 +29,7 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/gazebo-11"
   "/usr/include/bullet"
-  "/usr/include/sdformat-9.6"
+  "/usr/include/sdformat-9.5"
   "/usr/include/OGRE"
   "/usr/include/OGRE/Terrain"
   "/usr/include/OGRE/Paging"
@@ -40,7 +40,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "/usr/include/ignition/common3"
   "/usr/include/ignition/fuel_tools4"
   "/usr/include/eigen3"
-  "/usr/include/sdformat-9.6/sdf/.."
+  "/usr/include/sdformat-9.5/sdf/.."
   "/usr/include/ignition/cmake2"
   "/usr/include/uuid"
   )
